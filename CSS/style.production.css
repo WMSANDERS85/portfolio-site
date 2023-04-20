@@ -1,13 +1,5 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 #top {
     width: 200px;
@@ -40,28 +32,16 @@ footer {
 
 a {
     color: black;
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
+    transition-duration: 1s;
     transition-property: opacity;
-    -webkit-transition-timing-function: ease-in-out;
-         -o-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
 }
 
 .link {
     color: black;
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
+    transition-duration: 1s;
     transition-property: opacity;
-    -webkit-transition-timing-function: ease-in-out;
-         -o-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
 }
 
 a:visited {
@@ -91,11 +71,7 @@ a:focus {
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition-duration: 0.9s;
-         -o-transition-duration: 0.9s;
-            transition-duration: 0.9s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
+    transition-duration: 0.9s;
     transition-property: opacity;
 }
 button {
@@ -108,11 +84,7 @@ button {
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition-duration: 0.9s;
-         -o-transition-duration: 0.9s;
-            transition-duration: 0.9s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
+    transition-duration: 0.9s;
     transition-property: opacity;
 }
 
@@ -143,29 +115,22 @@ button:active,
     border-radius: 50%;
 }
 .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     clear: both;
 }
 .page-footer {
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
 }
 svg {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -174,10 +139,8 @@ svg {
     margin: 0 auto;
 }
 .grid {
-    display: -ms-grid;
     display: grid;
     background-color: lightgray;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
@@ -195,13 +158,11 @@ svg {
 }
 @media all and (max-width: 500px) {
     .grid {
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
     .grid {
-        -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -219,17 +180,6 @@ svg {
     }
 }
 /* defining a color-change for animation*/
-@-webkit-keyframes color-change {
-    0% {
-        fill: yellow;
-    }
-    50% {
-        fill: #ff5349;
-    }
-    100% {
-        fill: white;
-    }
-}
 @keyframes color-change {
     0% {
         fill: yellow;
@@ -241,17 +191,6 @@ svg {
         fill: white;
     }
 }
-@-webkit-keyframes night {
-    0% {
-        fill: white;
-    }
-    50% {
-        fill: gray;
-    }
-    100% {
-        fill: black;
-    }
-}
 @keyframes night {
     0% {
         fill: white;
@@ -261,17 +200,6 @@ svg {
     }
     100% {
         fill: black;
-    }
-}
-@-webkit-keyframes window-light {
-    0% {
-        fill: lightblue;
-    }
-    50% {
-        fill: gray;
-    }
-    100% {
-        fill: yellow;
     }
 }
 @keyframes window-light {
@@ -286,52 +214,32 @@ svg {
     }
 }
 
-@-webkit-keyframes cloud-move {
-    from {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-    to {
-        -webkit-transform: translate(200px, 0px);
-                transform: translate(200px, 0px);
-    }
-}
-
 @keyframes cloud-move {
     from {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(200px, 0px);
-                transform: translate(200px, 0px);
+        transform: translate(200px, 0px);
     }
 }
 
 .sun {
     /* combined animation duration animation-name iteration count direction timing function */
-    -webkit-animation: 10s color-change infinite alternate linear;
-            animation: 10s color-change infinite alternate linear;
+    animation: 10s color-change infinite alternate linear;
 }
 #cloud_right {
-    -webkit-animation: 10s cloud-move infinite alternate linear;
-            animation: 10s cloud-move infinite alternate linear;
+    animation: 10s cloud-move infinite alternate linear;
 }
 .city {
-    -webkit-animation: 10s night infinite alternate linear;
-            animation: 10s night infinite alternate linear;
+    animation: 10s night infinite alternate linear;
 }
 #left_car {
-    -webkit-animation: 10s cloud-move infinite alternate linear;
-            animation: 10s cloud-move infinite alternate linear;
+    animation: 10s cloud-move infinite alternate linear;
 }
 .windows {
-    -webkit-animation: 10s window-light infinite alternate linear;
-            animation: 10s window-light infinite alternate linear;
+    animation: 10s window-light infinite alternate linear;
 }
 table {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin: 0 auto;
 }
