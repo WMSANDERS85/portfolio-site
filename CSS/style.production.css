@@ -1,0 +1,337 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#top {
+    width: 200px;
+    height: 200px;
+}
+header {
+    background-color: #a5d7e8;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    line-height: 20px;
+    padding: 10px;
+}
+body {
+    background-color: #ffc0cb;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: medium;
+}
+footer {
+    background-color: #a5d7e8;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    padding: 10px 0px 10px 0px;
+    height: 150px;
+}
+
+a {
+    color: black;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+}
+
+.link {
+    color: black;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+}
+
+a:visited {
+    color: #940094;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+a:active {
+    color: blue
+}
+
+a:focus {
+    outline: 3px solid blue;
+    opacity: 0.6;
+}
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #2fa41a;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition-duration: 0.9s;
+         -o-transition-duration: 0.9s;
+            transition-duration: 0.9s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #2fa41a;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition-duration: 0.9s;
+         -o-transition-duration: 0.9s;
+            transition-duration: 0.9s;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 70% */
+    opacity: 0.8;
+}
+button:active,
+.button:active {
+    /* change text color to white when button is clikced*/
+    color: white;
+}
+
+.button_secondary {
+    background-color: #e0b354;
+    color: red;
+}
+
+.profile_portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    clear: both;
+}
+.page-footer {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.grid {
+    display: -ms-grid;
+    display: grid;
+    background-color: lightgray;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.navigation {
+    float: right;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+/* Question for Sahil - why does this piece of code work? When I use .navigation-list_item with this code it doesn't work. */
+.navigation li {
+    display: inline-block;
+    list-style: none;
+}
+@media all and (max-width: 500px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        -ms-grid-columns: 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    /* Question for Sahil- when I remove this piece of code the page functions as if it were there. What is the purpose of this code? */
+    .grid_item:last-child {
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+/* defining a color-change for animation*/
+@-webkit-keyframes color-change {
+    0% {
+        fill: yellow;
+    }
+    50% {
+        fill: #ff5349;
+    }
+    100% {
+        fill: white;
+    }
+}
+@keyframes color-change {
+    0% {
+        fill: yellow;
+    }
+    50% {
+        fill: #ff5349;
+    }
+    100% {
+        fill: white;
+    }
+}
+@-webkit-keyframes night {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: black;
+    }
+}
+@keyframes night {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: black;
+    }
+}
+@-webkit-keyframes window-light {
+    0% {
+        fill: lightblue;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: yellow;
+    }
+}
+@keyframes window-light {
+    0% {
+        fill: lightblue;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: yellow;
+    }
+}
+
+@-webkit-keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+    to {
+        -webkit-transform: translate(200px, 0px);
+                transform: translate(200px, 0px);
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+    to {
+        -webkit-transform: translate(200px, 0px);
+                transform: translate(200px, 0px);
+    }
+}
+
+.sun {
+    /* combined animation duration animation-name iteration count direction timing function */
+    -webkit-animation: 10s color-change infinite alternate linear;
+            animation: 10s color-change infinite alternate linear;
+}
+#cloud_right {
+    -webkit-animation: 10s cloud-move infinite alternate linear;
+            animation: 10s cloud-move infinite alternate linear;
+}
+.city {
+    -webkit-animation: 10s night infinite alternate linear;
+            animation: 10s night infinite alternate linear;
+}
+#left_car {
+    -webkit-animation: 10s cloud-move infinite alternate linear;
+            animation: 10s cloud-move infinite alternate linear;
+}
+.windows {
+    -webkit-animation: 10s window-light infinite alternate linear;
+            animation: 10s window-light infinite alternate linear;
+}
+table {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+}

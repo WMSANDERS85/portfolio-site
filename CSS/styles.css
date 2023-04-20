@@ -1,0 +1,237 @@
+:root{
+    --primary-color: #ffc0cb;
+    --secondary-color:#a5d7e8;
+    --button-color:#2fa41a;
+    --secondary-button:#e0b354;
+    --visited-color:#940094;
+    --default-color: black;
+    --active-focus-color: blue;
+    --font-weight-body: 300;
+    --font-weight-other: 400;
+    --font-size-other: 24px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+#top {
+    width: 200px;
+    height: 200px;
+}
+header {
+    background-color: var(--secondary-color);
+    font-family: "Lato", sans-serif;
+    font-size: var(--font-size-other);
+    font-weight: var(--font-weight-other);
+    color: black;
+    line-height: 20px;
+    padding: 10px;
+}
+body {
+    background-color: var(--primary-color);
+    font-family: "Lato", sans-serif;
+    font-weight: var(--font-weight-body);
+    font-size: medium;
+}
+footer {
+    background-color: var(--secondary-color);
+    font-family: "Lato", sans-serif;
+    font-size: var(--font-size-other);
+    font-weight: var(--font-weight-other);
+    color: black;
+    padding: 10px 0px 10px 0px;
+    height: 150px;
+}
+
+a,
+.link {
+    color: var(--default-color);
+    transition-duration: 1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+a:active {
+    color: var(--active-focus-color)
+}
+
+a:focus {
+    outline: 3px solid var(--active-focus-color);
+    opacity: 0.6;
+}
+.button,
+button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #2fa41a;
+    color: var(--default-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.9s;
+    transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 70% */
+    opacity: 0.8;
+}
+button:active,
+.button:active {
+    /* change text color to white when button is clikced*/
+    color: white;
+}
+
+.button_secondary {
+    background-color: var(--secondary-button);
+    color: red;
+}
+
+.profile_portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.page-header {
+    display: flex;
+    clear: both;
+}
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+svg {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    background-color: lightgray;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.navigation {
+    float: right;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+/* Question for Sahil - why does this piece of code work? When I use .navigation-list_item with this code it doesn't work. */
+.navigation li {
+    display: inline-block;
+    list-style: none;
+}
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    /* Question for Sahil- when I remove this piece of code the page functions as if it were there. What is the purpose of this code? */
+    .grid_item:last-child {
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+/* defining a color-change for animation*/
+@keyframes color-change {
+    0% {
+        fill: yellow;
+    }
+    50% {
+        fill: #ff5349;
+    }
+    100% {
+        fill: white;
+    }
+}
+@keyframes night {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: black;
+    }
+}
+@keyframes window-light {
+    0% {
+        fill: lightblue;
+    }
+    50% {
+        fill: gray;
+    }
+    100% {
+        fill: yellow;
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(200px, 0px);
+    }
+}
+
+.sun {
+    /* combined animation duration animation-name iteration count direction timing function */
+    animation: 10s color-change infinite alternate linear;
+}
+#cloud_right {
+    animation: 10s cloud-move infinite alternate linear;
+}
+.city {
+    animation: 10s night infinite alternate linear;
+}
+#left_car {
+    animation: 10s cloud-move infinite alternate linear;
+}
+.windows {
+    animation: 10s window-light infinite alternate linear;
+}
+table {
+    justify-content: center;
+    margin: 0 auto;
+}
