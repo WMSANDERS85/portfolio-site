@@ -113,6 +113,8 @@ button:active,
 .page-header {
     display: flex;
     clear: both;
+    
+    
 }
 .page-footer {
     clear: both;
