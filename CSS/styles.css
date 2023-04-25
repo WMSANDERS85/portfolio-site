@@ -117,15 +117,20 @@ button:active,
     
 }
 .page-footer {
-    clear: both;
+    /* clear: both; */
     display: flex;
     flex-direction: column;
     text-align: center;
     position: absolute;
-    margin-bottom: 0px;
+    bottom: 0px;
     width: 100%;
     height: 150px;
 }
+.bottom-container{
+    position: relative;
+    height: 100vh;
+
+}        
 svg {
     display: flex;
     justify-content: center;
