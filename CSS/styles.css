@@ -1,21 +1,20 @@
-:root{
+:root {
     --primary-color: #ffc0cb;
-    --secondary-color:#a5d7e8;
-    --button-color:#2fa41a;
-    --secondary-button:#e0b354;
-    --visited-color:#940094;
+    --secondary-color: #a5d7e8;
+    --button-color: #2fa41a;
+    --secondary-button: #e0b354;
+    --visited-color: #940094;
     --default-color: black;
     --active-focus-color: blue;
     --font-weight-body: 300;
     --font-weight-other: 400;
     --font-size-other: 24px;
-
 }
 
 * {
     box-sizing: border-box;
 }
-#top {
+.top_logo {
     width: 200px;
     height: 200px;
 }
@@ -27,6 +26,7 @@ header {
     color: black;
     line-height: 20px;
     padding: 10px;
+    width: 100vmax;
 }
 body {
     background-color: var(--primary-color);
@@ -62,7 +62,7 @@ a:hover {
 }
 
 a:active {
-    color: var(--active-focus-color)
+    color: var(--active-focus-color);
 }
 
 a:focus {
@@ -113,8 +113,6 @@ button:active,
 .page-header {
     display: flex;
     clear: both;
-    
-    
 }
 .page-footer {
     /* clear: both; */
@@ -123,18 +121,20 @@ button:active,
     text-align: center;
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 100vmax;
     height: 150px;
 }
-.bottom-container{
+.bottom-container {
     position: relative;
     height: 100vh;
-
-}        
-svg {
+}
+.svg-container {
     display: flex;
     justify-content: center;
-    margin: 0px auto;
+    height: 50vh;
+}
+svg {
+    position: absolute;
 }
 
 .profile {
@@ -163,12 +163,48 @@ svg {
     .grid {
         grid-template-columns: 1fr;
     }
+    .page-header {
+        width: 100vmax;
+        position: relative;
+    }
+    .page-footer {
+        width: 100vmax;
+    }
+    .navigation {
+        position: absolute;
+        float: right;
+    }
+    .navigation li {
+        list-style: none;
+        margin: auto;
+    }
 }
-@media all and (min-width: 500px) and (max-width: 750px) {
+@media all and (min-width: 300px) and (max-width: 750px) {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
+    .page-header {
+        width: 100vmax;
+        position: relative;
+    }
+    .page-footer {
+        width: 100vmax;
+    }
+    .navigation {
+        position: absolute;
+        float: right;
+        display: block;
+    }
+    .navigation li {
+        list-style: none;
+        margin: auto;
+    }
+    .top_logo {
+        height: 100px;
+        width: 100px;
+    }
 }
+
 @media all and (max-width: 750px) {
     .grid {
         grid-gap: 10px;
@@ -180,6 +216,21 @@ svg {
     }
     h1 {
         font-size: 22px;
+    }
+    .page-header {
+        width: 100vmax;
+        position: relative;
+    }
+    .page-footer {
+        width: 100vmax;
+    }
+    .navigation {
+        position: absolute;
+        float: right;
+    }
+    .navigation li {
+        list-style: none;
+        margin: auto;
     }
 }
 /* defining a color-change for animation*/
