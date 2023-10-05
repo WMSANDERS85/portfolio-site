@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #ffc0cb;
-    --secondary-color: #a5d7e8;
-    --button-color: #2fa41a;
-    --secondary-button: #e0b354;
+    --primary-color: #FAF0E6;
+    --secondary-color: #B9B4C7;
+    --button-color: #5C5470;
+    --secondary-button: #fff;
     --visited-color: #940094;
     --default-color: black;
     --active-focus-color: blue;
@@ -74,8 +74,8 @@ button {
     border: none;
     display: inline-block;
     font-family: inherit;
-    background-color: #2fa41a;
-    color: var(--default-color);
+    background-color: var(--button-color);
+    color: var(--secondary-button);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
@@ -143,9 +143,9 @@ svg {
 }
 .grid {
     display: grid;
-    background-color: lightgray;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    
 }
 
 .navigation {
@@ -161,7 +161,7 @@ svg {
 }
 @media all and (max-width: 500px) {
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr ;
     }
     .page-header {
         width: 100vmax;
@@ -181,7 +181,7 @@ svg {
 }
 @media all and (min-width: 300px) and (max-width: 750px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr ;
     }
     .page-header {
         width: 100vmax;
@@ -207,7 +207,7 @@ svg {
 
 @media all and (max-width: 750px) {
     .grid {
-        grid-gap: 10px;
+        grid-gap: 20px;
     }
     /* Question for Sahil- when I remove this piece of code the page functions as if it were there. What is the purpose of this code? */
     .grid_item:last-child {
@@ -297,3 +297,18 @@ table {
     justify-content: center;
     margin: 0 auto;
 }
+
+.project-image {
+    height: 400px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.grid_item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+
